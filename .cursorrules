@@ -1,0 +1,19 @@
+# AI Behavior Rules
+
+1. **Context Awareness**: 
+   - Always check the `docs/` folder for project documentation before starting new tasks.
+   - Use the `confluence-dev-ai-automation` repo scope for all searches.
+
+2. **Code Style (Python)**:
+   - Follow PEP 8 guidelines.
+   - Type hints are required for all function signatures.
+   - Use `black` for formatting if available.
+   - Docstrings should use Google style.
+
+3. **Documentation**:
+   - Update `docs/` with every major feature change.
+   - Maintain a `CHANGELOG.md` in `docs/` if possible.
+
+4. **Testing**:
+   - Write unit tests for all utility functions.
+   - Use `pytest` as the testing framework.
