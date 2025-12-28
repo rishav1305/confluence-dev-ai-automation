@@ -21,3 +21,10 @@ Generate a page using the script:
 ```bash
 python3 src/doc_generator.py --space "SPACE_KEY" --title "Page Title" --content "<h1>Hello World</h1><p>Content</p>"
 ```
+
+### Confluence MCP Server
+Run a local MCP server to expose Confluence to AI agents via SSE:
+```bash
+# Uses port 8081 by default
+python -m src.confluence_mcp_server --transport sse --port 8081
+```

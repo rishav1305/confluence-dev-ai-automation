@@ -54,3 +54,11 @@ class ConfluenceClient:
         if page:
             return page.get('id')
         return None
+
+    def get_page(self, page_id: str) -> dict:
+        """Retrieves page details including storage format body."""
+        return self.confluence.get_page_by_id(page_id, expand='body.storage')
+
+    def search_pages(self, cql: str) -> dict:
+        """Searches for pages using Confluence Query Language (CQL)."""
+        return self.confluence.cql(cql)
