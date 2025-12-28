@@ -62,3 +62,7 @@ class ConfluenceClient:
     def search_pages(self, cql: str) -> dict:
         """Searches for pages using Confluence Query Language (CQL)."""
         return self.confluence.cql(cql)
+
+    def create_space(self, key: str, name: str) -> dict:
+        """Creates a new space."""
+        return self.confluence.create_space(key, name)

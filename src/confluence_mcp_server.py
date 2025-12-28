@@ -100,6 +100,21 @@ def get_page_id(space: str, title: str) -> str:
     except Exception as e:
         return f"Error identifying page: {str(e)}"
 
+@mcp.tool()
+def create_space(key: str, name: str) -> str:
+    """
+    Create a new Confluence space.
+    Args:
+        key: The space key (e.g., 'CDAA').
+        name: The space name.
+    """
+    try:
+        c = get_client()
+        result = c.create_space(key, name)
+        return str(result)
+    except Exception as e:
+        return f"Error creating space: {str(e)}"
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--transport", default="stdio", choices=["stdio", "sse"])
